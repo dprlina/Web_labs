@@ -1,0 +1,344 @@
+/* Основные цвета персонажа */
+:root {
+    --chainsaw-orange: #FF5E1A;
+    --denji-hair: #FFD700;
+    --blood-red: #8B0000;
+    --dark-bg: #121212;
+    --card-bg: #1E1E1E;
+    --text-light: #F0F0F0;
+  }
+  
+  /* Общие стили */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Навигация */
+  .main-nav {
+    background-color: #000;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--chainsaw-orange);
+  }
+  
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  .main-nav a {
+    color: var(--denji-hair);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s;
+  }
+  
+  .main-nav a:hover {
+    color: var(--chainsaw-orange);
+    text-shadow: 0 0 5px rgba(255, 94, 26, 0.7);
+  }
+  
+  /* Карточка персонажа */
+  .business-card {
+    max-width: 350px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 94, 26, 0.2);
+    border: 1px solid var(--chainsaw-orange);
+  }
+  
+  .card-header {
+    background: linear-gradient(to bottom, #000, #222);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--blood-red);
+  }
+  
+  .card-header h1 {
+    color: var(--denji-hair);
+    margin-top: 15px;
+    font-size: 1.8rem;
+  }
+  
+  .card-header h2 {
+    color: var(--chainsaw-orange);
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .character-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--denji-hair);
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  /* Секции карточки */
+  .card-section {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .card-section:last-child {
+    border-bottom: none;
+  }
+  
+  .card-section h2 {
+    color: var(--chainsaw-orange);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .card-section p, 
+  .card-section li {
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+  
+  .card-section ul {
+    list-style: none;
+    padding-left: 5px;
+  }
+  
+  .card-section li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .card-section li i {
+    color: var(--denji-hair);
+  }
+  
+  .card-footer {
+    background: #000;
+    padding: 12px;
+    text-align: center;
+    font-style: italic;
+    color: var(--chainsaw-orange);
+    border-top: 1px solid var(--blood-red);
+  }
+  
+  /* Индикатор силы */
+  .power-level {
+    background: #000;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .power-label {
+    color: var(--text-light);
+    margin-right: 10px;
+  }
+  
+  .power-value {
+    color: var(--denji-hair);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+  }
+  
+  /* Стили для страницы "О себе" */
+  .bio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .bio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .bio-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid var(--chainsaw-orange);
+    box-shadow: 0 4px 15px rgba(255, 94, 26, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .bio-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .bio-text {
+    max-width: 600px;
+    padding: 1rem;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .timeline-date {
+    background: var(--blood-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .timeline-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--denji-hair);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Стили для страницы "Навыки" */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .skill-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 3px solid var(--chainsaw-orange);
+    transition: transform 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill-visual {
+    width: 100%;
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+  }
+  
+  /* Стили для страницы "Достижения" */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .achievement-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .achievement-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    object-position: center center;
+  }
+  
+  .achievement-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+  
+  .achievement-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .achievement-card:hover .achievement-image {
+    transform: scale(1.05);
+  }
+  
+  .achievement-card:hover .achievement-overlay {
+    transform: translateY(0);
+  }
+  
+  .filter-btn {
+    background: var(--card-bg);
+    color: var(--text-light);
+    border: 2px solid var(--chainsaw-orange);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+  }
+  
+  .filter-btn:hover, 
+  .filter-btn.active {
+    background: var(--chainsaw-orange);
+    color: #000;
+  }
+  
+  .achievement-category {
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--blood-red);
+    color: var(--denji-hair);
+  }
+  
+  .achievement-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--denji-hair);
+    color: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8em;
+  }

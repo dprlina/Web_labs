@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дэнжи - Контакты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О себе</a></li>
+            <li><a href="skills.html">Навыки</a></li>
+            <li><a href="achievements.html">Достижения</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="content-section">
+            <h1><i class="fas fa-envelope"></i> Контакты</h1>
+            <p>Свяжитесь со мной для сотрудничества или экстренных случаев</p>
+            
+            <div class="skills-container" style="margin-top: 30px;">
+                <!-- Контактная информация -->
+                <div class="skill-card">
+                    <h2><i class="fas fa-address-card"></i> Мои контакты</h2>
+                    <div class="card-section" style="border: none; padding: 0;">
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Токио, штаб-квартира Охотников</li>
+                            <li><i class="fas fa-phone"></i> +81 80-5555-3535</li>
+                            <li><i class="fas fa-envelope"></i> denji@chainsaw.jp</li>
+                            <li><i class="fas fa-clock"></i> Круглосуточно</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="achievements-grid" style="margin: 20px 0 0;">
+                        <div class="achievement-card">
+                            <img src="https://static.tildacdn.com/tild3965-3030-4561-a538-313538333734/2-min.jpg" 
+                                 alt="Карта Токио" 
+                                 class="achievement-image">
+                            <div class="achievement-overlay">
+                                <h3>Мое местоположение</h3>
+                                <p>Штаб-квартира Охотников на демонов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Форма обратной связи -->
+                <div class="skill-card">
+                    <h2><i class="fas fa-paper-plane"></i> Форма связи</h2>
+                    <form class="card-section" style="border: none; padding: 0;">
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px;">Ваше имя</label>
+                            <input type="text" style="width: 100%; padding: 10px; background: var(--dark-bg); border: 1px solid #333; border-radius: 5px; color: var(--text-light);">
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px;">Email</label>
+                            <input type="email" style="width: 100%; padding: 10px; background: var(--dark-bg); border: 1px solid #333; border-radius: 5px; color: var(--text-light);">
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px;">Сообщение</label>
+                            <textarea style="width: 100%; padding: 10px; background: var(--dark-bg); border: 1px solid #333; border-radius: 5px; color: var(--text-light); min-height: 150px;"></textarea>
+                        </div>
+                        
+                        <button type="submit" style="background: var(--chainsaw-orange); color: #000; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                            <i class="fas fa-paper-plane"></i> Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Обработка формы (пример)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Сообщение отправлено! Я отвечу после охоты на демонов.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дэнжи - Достижения</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О себе</a></li>
+            <li><a href="skills.html">Навыки</a></li>
+            <li><a href="achievements.html">Достижения</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="content-section">
+            <h1><i class="fas fa-trophy" style="color: var(--denji-hair);"></i> Мои трофеи</h1>
+            <p>За время службы в Отделе охотников на демонов я заработал эти награды кровью и потом.</p>
+        </section>
+
+        <!-- Боевые достижения -->
+        <section class="content-section">
+            <h2 class="achievement-category"><i class="fas fa-crosshairs"></i> Боевые подвиги</h2>
+            <div class="achievements-grid">
+                <!-- Достижение 1 -->
+                <div class="achievement-card" data-category="combat">
+                    <div class="achievement-badge"><i class="fas fa-skull"></i></div>
+                    <img src="https://avatars.mds.yandex.net/i?id=a728ac885b563681e6dae9ef0d347ce4_l-5229055-images-thumbs&n=13" alt="Убийца демонов" class="achievement-image">
+                    <div class="achievement-overlay">
+                        <h3>Убийца демонов</h3>
+                        <p>Уничтожил 100+ демонов</p>
+                        <div class="achievement-date">12.10.2022</div>
+                    </div>
+                </div>
+                
+                <!-- Достижение 2 -->
+                <div class="achievement-card" data-category="combat">
+                    <div class="achievement-badge"><i class="fas fa-bomb"></i></div>
+                    <img src="https://avatars.mds.yandex.net/i?id=0af2049020aaa9e2f410ca58a23af668_l-5245206-images-thumbs&n=13" alt="Победитель Бомбы" class="achievement-image">
+                    <div class="achievement-overlay">
+                        <h3>Победитель Бомбы</h3>
+                        <p>Одолел Демона-Бомбу</p>
+                        <div class="achievement-date">03.03.2023</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особые достижения -->
+        <section class="content-section">
+            <h2 class="achievement-category"><i class="fas fa-star"></i> Особые заслуги</h2>
+            <div class="achievements-grid">
+                <!-- Достижение 3 -->
+                <div class="achievement-card" data-category="special">
+                    <div class="achievement-badge"><i class="fas fa-heart"></i></div>
+                    <img src="https://avatars.mds.yandex.net/i?id=a5c00bd9cbcf5aebdd63f03d78034bc4c3456b72-9065825-images-thumbs&n=13" alt="Сердцеед" class="achievement-image">
+                    <div class="achievement-overlay">
+                        <h3>Сердцеед</h3>
+                        <p>Получил признание Макимы</p>
+                        <div class="achievement-date">15.05.2023</div>
+                    </div>
+                </div>
+                
+                <!-- Достижение 4 -->
+                <div class="achievement-card" data-category="special">
+                    <div class="achievement-badge"><i class="fas fa-dog"></i></div>
+                    <img src="https://i.pinimg.com/736x/f5/9b/f8/f59bf843b7533c788ac4a8861845a3d1.jpg" alt="Лучший друг Почито" class="achievement-image">
+                    <div class="achievement-overlay">
+                        <h3>Лучший друг Почито</h3>
+                        <p>Заключил идеальный контракт с демоном</p>
+                        <div class="achievement-date">01.01.2022</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сюжетные достижения -->
+        <section class="content-section">
+            <h2 class="achievement-category"><i class="fas fa-book"></i> Сюжетные вехи</h2>
+            <div class="achievements-grid">
+                <!-- Достижение 5 -->
+                <div class="achievement-card" data-category="story">
+                    <div class="achievement-badge"><i class="fas fa-home"></i></div>
+                    <img src="https://i.pinimg.com/736x/11/4b/e8/114be8a14a93bbd876ac735263c3c911.jpg" alt="Новая жизнь" class="achievement-image">
+                    <div class="achievement-overlay">
+                        <h3>Новая жизнь</h3>
+                        <p>Вступил в Отдел охотников</p>
+                        <div class="achievement-date">10.02.2022</div>
+                    </div>
+                </div>
+                
+                <!-- Достижение 6 -->
+                <div class="achievement-card" data-category="story">
+                    <div class="achievement-badge"><i class="fas fa-flag"></i></div>
+                    <img src="https://avatars.mds.yandex.net/i?id=7f23b97e07a90019edf8ec7242adc444_l-3862711-images-thumbs&n=13" alt="Финал арки" class="achievement-image">
+                    <div class="achievement-overlay">
+                        <h3>Финал арки</h3>
+                        <p>Убил Макиму в финальной битве и съел ее чтобы она не возрадилась</p>
+                        <div class="achievement-date">25.12.2023</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Фильтрация достижений
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Удаляем активный класс у всех кнопок
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Добавляем активный класс текущей кнопке
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                const allAchievements = document.querySelectorAll('.achievement-card');
+                
+                allAchievements.forEach(ach => {
+                    if (filter === 'all' || ach.dataset.category === filter) {
+                        ach.style.display = 'block';
+                    } else {
+                        ach.style.display = 'none';
+                    }
+                });
+                
+                // Плавная прокрутка к началу секции
+                document.querySelector('.achievements-grid').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
