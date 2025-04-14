@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_booking.css">
+    <title>GODDAAMN</title>
+</head>
+<body>
+    
+    <form action="#">
+        <h1>Забронируйте свое путишествие!</h1>
+
+        <fieldset>
+            <legend>Основная информация</legend>
+            <label for="first-name">Ваше имя:</label>
+            <input type="text" id="first-name" required/>  
+            <br>
+        
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" required/>  
+            <br>
+        
+            <label>Тип путишествия:</label>
+            <select>
+                <option>Экскурсионный тур</option>
+                <option selected>Пляжный отдых</option>
+                <option>Приключения</option>
+                <option>Круиз</option>
+            </select> 
+            <br>
+        
+            <label>Количество путишественников:</label>
+            <input type="number" min="1" max="10" required/>  
+            <br>
+        
+            <label>Дата начала путишествия:</label>
+            <input type="date" required/>  
+            <br>
+        
+            <label>Ваши пожелания:</label>
+            <textarea rows="4" cols="50"></textarea>
+            <br>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Выбор отеля и услуг</legend>
+            <label for="hotel">Выберите отель:</label>
+            <select id="hotel" name="hotel">
+                <option value="hotel1">Отель 1</option>
+                <option value="hotel2">Отель 2</option>
+                <option value="hotel3">Отель 3</option>
+            </select><br>
+
+            <label for="insurance">Страховка:</label>
+            <input type="checkbox" id="insurance" name="insurance" value="yes"> Добавить страховку<br>
+        </fieldset>
+        
+        <p><input type="checkbox" required/>Я согласен на обработку моих персональных данных.</p>
+        <input type="submit"/>
+        
+        <h2>Другие направления</h2>
+        <ul>
+            <li><a href="destination_bali.html">Бали</a></li>
+            <li><a href="destination_thailand.html">Таиланд</a></li>
+            <li><a href="destination.html">Мальдивы</a></li>
+        </ul>
+    </form>
+</body>
+</html>
