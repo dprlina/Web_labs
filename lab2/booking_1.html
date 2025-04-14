@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GODDAAMN</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Забронируйте свое путишествие!</h1>
+        
+        <label for="first-name">Ваше имя:</label>
+        <input type="text" id="first-name" required/>  
+        
+        <br>
+        <label for="email">Ваш email:</label>
+        <input type="email" id="email" required/>  
+        
+        <br>
+        <label>Тип путишествия:</label>
+        <select>
+            <option>Экскурсионный тур</option>
+            <option selected>Пляжный отдых</option>
+            <option>Приключения</option>
+            <option>Круиз</option>
+        </select> 
+        
+        <br>
+        <label>Количество путишественников:</label>
+        <input type="number" min="1" max="10" required/>  
+        
+        <br>
+        <label>Дата начала путишествия:</label>
+        <input type="date" required/>  
+        
+        <br>
+        <label for="wishes">Ваши пожелания:</label>
+        <textarea id="wishes" rows="4" cols="50"></textarea>
+        
+        <br>
+        <p><input type="checkbox" required/>Я согласен на обработку моих персональных данных.</p>
+        
+        <input type="submit"/>
+    </form>
+</body>
+</html>
