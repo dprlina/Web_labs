@@ -1,0 +1,7 @@
+monty-hall-css-only/
+├── index.html
+├── style.css
+├── images/
+│   ├── car.png
+│   └── goat.png
+├── README.md
